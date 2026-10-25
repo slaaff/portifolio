@@ -322,6 +322,39 @@ body {
     transform: translateY(-2px);
 }
 
+.btn--linkedin-hero {
+    background: rgba(10, 102, 194, 0.15);
+    border: 1px solid rgba(10, 102, 194, 0.45);
+    color: #70b5f9;
+}
+
+.btn--linkedin-hero:hover {
+    background: #0a66c2;
+    border-color: #0a66c2;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.35);
+}
+
+.btn--linkedin-primary {
+    background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(10, 102, 194, 0.35);
+}
+
+.btn--linkedin-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(10, 102, 194, 0.55);
+    filter: brightness(1.1);
+}
+
+.header__cta-icon {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
 .btn__icon {
     width: 20px;
     height: 20px;
@@ -551,6 +584,135 @@ section {
     font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+/* ==========================================================================
+   SEÇÃO ESPECIAL LINKEDIN
+   ========================================================================== */
+
+.linkedin-section {
+    padding: 60px 0;
+}
+
+.linkedin-box {
+    position: relative;
+    background: radial-gradient(circle at top left, rgba(22, 16, 11, 0.95) 0%, rgba(10, 8, 6, 0.98) 100%);
+    border: 1px solid var(--border-medium);
+    border-radius: 20px;
+    padding: 44px;
+    box-shadow: var(--shadow-cinematic);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.linkedin-box:hover {
+    border-color: var(--border-glow);
+    box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px rgba(10, 102, 194, 0.25);
+}
+
+.linkedin-box__glow {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(10, 102, 194, 0.25) 0%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+.linkedin-box__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.linkedin-avatar-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+}
+
+.linkedin-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 25px rgba(203, 162, 113, 0.3);
+}
+
+.linkedin-status-badge {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    background: #0a66c2;
+    border: 2px solid var(--bg-surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.linkedin-box__info-col {
+    flex-grow: 1;
+}
+
+.linkedin-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #70b5f9;
+    background: rgba(10, 102, 194, 0.12);
+    border: 1px solid rgba(10, 102, 194, 0.3);
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.linkedin-mini-logo {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.linkedin-box__name {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.linkedin-box__headline {
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--accent-gold-light);
+    margin-bottom: 12px;
+}
+
+.linkedin-box__desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    max-width: 720px;
+}
+
+.linkedin-box__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
 }
 
 /* ==========================================================================
@@ -814,6 +976,23 @@ section {
     filter: brightness(0);
 }
 
+.contact-pill--linkedin {
+    background: rgba(10, 102, 194, 0.16);
+    border-color: rgba(10, 102, 194, 0.45);
+    color: #70b5f9;
+}
+
+.contact-pill--linkedin:hover {
+    background: #0a66c2;
+    border-color: #0a66c2;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(10, 102, 194, 0.45);
+}
+
+.contact-pill--linkedin:hover img {
+    filter: brightness(10);
+}
+
 /* ==========================================================================
    RODAPÉ
    ========================================================================== */
@@ -897,6 +1076,21 @@ section {
 
     .stats-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .linkedin-box__inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .linkedin-box__actions {
+        justify-content: center;
+    }
+
+    .linkedin-box__desc {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
