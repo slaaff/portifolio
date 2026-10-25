@@ -1,16 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=index.html#sobre">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim | João Vitor</title>
+    <title>Sobre Mim | João Vitor S. Galdino</title>
+    <meta name="description" content="Conheça a trajetória e habilidades de João Vitor S. Galdino - Desenvolvedor Front-end especializado em React e JavaScript.">
+    
+    <!-- OpenGraph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Sobre Mim | João Vitor S. Galdino">
+    <meta property="og:description" content="Conheça mais sobre a experiência, objetivos e habilidades técnicas de João Vitor.">
+    <meta property="og:image" content="https://portifolio-rho-tan-10.vercel.app/assets/foto.jpg">
+    <meta property="og:url" content="https://portifolio-rho-tan-10.vercel.app/about.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center;">
-    <div>
-        <h1 style="font-family: var(--font-heading); color: var(--accent-gold); margin-bottom: 16px;">Redirecionando...</h1>
-        <p style="color: var(--text-secondary);"><a href="index.html#sobre" style="color: var(--accent-gold-light);">Clique aqui</a> caso não seja redirecionado automaticamente.</p>
-    </div>
+
+<body>
+    <!-- Iluminação ambiente de fundo -->
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <span class="logo__text">JOÃO VITOR</span>
+                <span class="logo__dot"></span>
+            </a>
+            
+            <nav class="header__nav">
+                <a class="nav__link" href="index.html">Início</a>
+                <a class="nav__link nav__link--active" href="about.html">Sobre mim</a>
+                <a class="nav__link" href="index.html#projetos">Projetos</a>
+                <a class="nav__link" href="index.html#skills">Habilidades</a>
+                <a class="nav__link" href="index.html#contato">Contato</a>
+            </nav>
+
+            <a class="header__cta" href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/linkedin.png" alt="LinkedIn" class="header__cta-icon">
+                <span>LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="page-about">
+        <div class="section__container">
+            <!-- Breadcrumb / Voltar -->
+            <div class="page-back">
+                <a href="index.html" class="back-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span>Voltar ao início</span>
+                </a>
+            </div>
+
+            <!-- Header da Página -->
+            <div class="section__header" style="text-align: left; margin-bottom: 40px;">
+                <span class="section__kicker">PERFIL & TRAJETÓRIA</span>
+                <h1 class="section__title" style="font-size: 2.8rem;">Sobre Mim</h1>
+                <p class="section__subtitle" style="text-align: left; margin: 0;">Conheça minha dedicação, processo de desenvolvimento e objetivos profissionais.</p>
+                <div class="section__line" style="margin: 20px 0 0 0;"></div>
+            </div>
+
+            <!-- Conteúdo Principal -->
+            <div class="about__grid">
+                <div class="about__text-block">
+                    <p class="about__paragraph">
+                        Sou <strong>João Vitor S. Galdino</strong>, desenvolvedor focado no ecossistema <strong>Front-end moderno</strong>. Minha atuação combina paixão por tecnologia com a criação de interfaces digitais que solucionam problemas reais de maneira intuitiva e agradável.
+                    </p>
+                    
+                    <p class="about__paragraph">
+                        Tenho como especialidade o desenvolvimento com <strong>React.js, JavaScript (ES6+), HTML5 e CSS3</strong>. Busco sempre escrever código estruturado, semântico, acessível e com alta performance, garantindo que as aplicações sejam ágeis tanto no carregamento quanto na interação diária do usuário.
+                    </p>
+
+                    <p class="about__paragraph">
+                        Mantenho uma rotina consistente de aprimoramento técnico, explorando novas bibliotecas, consumo de APIs REST, práticas de componentização e otimização para ambientes de produção.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-card__number">+2</span>
+                            <span class="stat-card__label">Anos de dedicação prática ao desenvolvimento web</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-card__number">100%</span>
+                            <span class="stat-card__label">Foco em usabilidade, performance e código limpo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__pillars">
+                    <div class="pillar-card">
+                        <div class="pillar-card__icon">🎯</div>
+                        <div class="pillar-card__info">
+                            <h3>Foco no Usuário</h3>
+                            <p>Interfaces pensadas para facilitar a vida de quem as utiliza, com fluxos objetivos, navegação clara e acessibilidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-card__icon">⚡</div>
+                        <div class="pillar-card__info">
+                            <h3>Performance & Responsividade</h3>
+                            <p>Aplicações leves, estruturadas sob o conceito Mobile-First, com perfeita adaptação a qualquer resolução de tela.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-card__icon">🧩</div>
+                        <div class="pillar-card__info">
+                            <h3>Componentização Eficiente</h3>
+                            <p>Código modular e desacoplado em React e JavaScript, facilitando testes, manutenções e o crescimento do projeto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Oficial de Conexão LinkedIn -->
+            <div class="linkedin-box" style="margin-top: 60px;">
+                <div class="linkedin-box__glow"></div>
+                <div class="linkedin-box__inner">
+                    <div class="linkedin-box__avatar-col">
+                        <div class="linkedin-avatar-wrapper">
+                            <img src="./assets/foto.jpg" alt="João Vitor S. Galdino" class="linkedin-avatar-img">
+                            <div class="linkedin-status-badge">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="linkedin-box__info-col">
+                        <div class="linkedin-badge-tag">
+                            <img src="./assets/linkedin.png" alt="LinkedIn Logo" class="linkedin-mini-logo">
+                            <span>PERFIL PROFISSIONAL OFICIAL</span>
+                        </div>
+
+                        <h3 class="linkedin-box__name">João Vitor S. Galdino</h3>
+                        <p class="linkedin-box__headline">
+                            Desenvolvedor Front-end • Especialista em React, JavaScript, HTML5 & CSS3
+                        </p>
+                        <p class="linkedin-box__desc">
+                            Acompanhe minhas atualizações técnicas, publicações e conexões profissionais no LinkedIn. Aberto a conversas sobre oportunidades e novos projetos.
+                        </p>
+
+                        <div class="linkedin-box__actions">
+                            <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin-primary">
+                                <img src="./assets/linkedin.png" alt="LinkedIn" class="btn__icon">
+                                <span>Conectar no LinkedIn</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                            <a href="index.html#projetos" class="btn btn--secondary">
+                                <span>Explorar Meus Projetos</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="footer__container">
+            <p class="footer__copy">
+                &copy; 2026 João Vitor S. Galdino (@slaaff). Todos os direitos reservados.
+            </p>
+            <a href="index.html" class="footer__back-top" title="Voltar ao início">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </a>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -6,55 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Vitor S. Galdino | Desenvolvedor Front-end</title>
-    <meta name="description" content="Portfólio de João Vitor S. Galdino (@slaaff) - Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3 com design moderno e cinematográfico.">
+    <meta name="description" content="Portfólio profissional de João Vitor S. Galdino - Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3.">
     
-    <!-- OpenGraph & Social Cards (Otimizado para LinkedIn, WhatsApp e Twitter) -->
+    <!-- OpenGraph / Social Share -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="João Vitor S. Galdino | Desenvolvedor Front-end">
-    <meta property="og:description" content="Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3. Criando interfaces de alta precisão com estética cinematográfica.">
+    <meta property="og:description" content="Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3. Aplicações web modernas e responsivas.">
     <meta property="og:image" content="https://portifolio-rho-tan-10.vercel.app/assets/foto.jpg">
     <meta property="og:url" content="https://portifolio-rho-tan-10.vercel.app">
-    <meta property="profile:first_name" content="João Vitor">
-    <meta property="profile:last_name" content="Galdino">
-    <meta property="profile:username" content="joaovsgaldino">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="João Vitor S. Galdino | Desenvolvedor Front-end">
-    <meta name="twitter:description" content="Portfólio Front-end com estética cinematográfica e foco em React & JavaScript.">
-    <meta name="twitter:image" content="https://portifolio-rho-tan-10.vercel.app/assets/foto.jpg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <!-- Iluminação ambiente cinematográfica de fundo -->
+    <!-- Iluminação ambiente de fundo -->
     <div class="ambient-glow ambient-glow--top"></div>
     <div class="ambient-glow ambient-glow--bottom"></div>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="header__container">
-            <a href="#inicio" class="header__logo">
+            <a href="index.html" class="header__logo">
                 <span class="logo__text">JOÃO VITOR</span>
                 <span class="logo__dot"></span>
             </a>
             
             <nav class="header__nav">
-                <a class="nav__link" href="#inicio">Início</a>
-                <a class="nav__link" href="#sobre">Sobre</a>
-                <a class="nav__link" href="#linkedin">LinkedIn</a>
-                <a class="nav__link" href="#skills">Habilidades</a>
+                <a class="nav__link nav__link--active" href="index.html">Início</a>
+                <a class="nav__link" href="about.html">Sobre mim</a>
                 <a class="nav__link" href="#projetos">Projetos</a>
+                <a class="nav__link" href="#skills">Habilidades</a>
                 <a class="nav__link" href="#contato">Contato</a>
             </nav>
 
             <a class="header__cta" href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer">
                 <img src="./assets/linkedin.png" alt="LinkedIn" class="header__cta-icon">
-                <span>Conectar no LinkedIn</span>
+                <span>LinkedIn</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
             </a>
         </div>
@@ -62,31 +55,33 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="inicio" class="hero">
+        <section class="hero">
             <div class="hero__container">
                 <div class="hero__content">
                     <div class="status-badge">
                         <span class="status-badge__dot"></span>
-                        <span class="status-badge__text">Disponível para novos projetos & vagas</span>
+                        <span class="status-badge__text">Disponível para novas oportunidades</span>
                     </div>
 
                     <h1 class="hero__title">
-                        Transformando visão em <span class="highlight-gold">experiências digitais</span> cinematográficas.
+                        Desenvolvedor <span class="highlight-gold">Front-end</span> focado em React & Web Moderna.
                     </h1>
 
                     <p class="hero__description">
-                        Olá! Sou <strong>João Vitor S. Galdino</strong>, desenvolvedor Front-end apaixonado por interfaces de alto impacto, precisão visual e código limpo. Domino <strong>React, JavaScript, HTML5 e CSS3</strong> para criar aplicações fluidas, memoráveis e prontas para escalar.
+                        Olá! Sou <strong>João Vitor S. Galdino</strong>. Construo interfaces web rápidas, responsivas e intuitivas com foco em <strong>React, JavaScript, HTML5 e CSS3</strong>, aliando código limpo à ótima experiência de usuário.
                     </p>
 
                     <div class="hero__actions">
                         <a href="#projetos" class="btn btn--primary">
-                            <span>Explorar Projetos</span>
+                            <span>Ver Projetos</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="about.html" class="btn btn--secondary">
+                            <span>Mais Sobre Mim</span>
                         </a>
                         <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin-hero">
                             <img src="./assets/linkedin.png" alt="LinkedIn" class="btn__icon">
-                            <span>Meu LinkedIn</span>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            <span>LinkedIn</span>
                         </a>
                         <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
                             <img src="./assets/github.png" alt="GitHub" class="btn__icon">
@@ -101,185 +96,20 @@
                         <img class="photo-frame__img" src="./assets/foto.jpg" alt="Foto de João Vitor S. Galdino">
                         <div class="photo-frame__badge">
                             <span class="badge__title">João Vitor S. Galdino</span>
-                            <span class="badge__subtitle">Front-end Developer • @slaaff</span>
+                            <span class="badge__subtitle">Desenvolvedor Front-end • @slaaff</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção Sobre Mim -->
-        <section id="sobre" class="about">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__kicker">TRAJETÓRIA & PROPÓSITO</span>
-                    <h2 class="section__title">Sobre Mim</h2>
-                    <div class="section__line"></div>
-                </div>
-
-                <div class="about__grid">
-                    <div class="about__text-block">
-                        <p class="about__paragraph">
-                            Minha motivação diária está no ponto exato onde o <strong>design refinado</strong> se encontra com a <strong>lógica de programação</strong>. Acredito que um software de excelência vai além de funcionar: ele precisa ser intuitivo, esteticamente envolvente e eficiente em qualquer tela.
-                        </p>
-                        <p class="about__paragraph">
-                            Com sólida base em <strong>tecnologias Web e Front-end moderno</strong>, busco constantemente aprender novas ferramentas, refinar arquiteturas de componentes e entregar interfaces que valorizam a identidade de marcas e produtos.
-                        </p>
-
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <span class="stat-card__number">+2</span>
-                                <span class="stat-card__label">Anos de dedicação e estudos em tecnologia</span>
-                            </div>
-                            <div class="stat-card">
-                                <span class="stat-card__number">100%</span>
-                                <span class="stat-card__label">Foco em UI responsiva & código limpo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about__pillars">
-                        <div class="pillar-card">
-                            <div class="pillar-card__icon">🎬</div>
-                            <div class="pillar-card__info">
-                                <h3>Estética & Atenção aos Detalhes</h3>
-                                <p>Criação de layouts com harmonia visual, tipografia calibrada e efeitos imersivos que prendem a atenção.</p>
-                            </div>
-                        </div>
-
-                        <div class="pillar-card">
-                            <div class="pillar-card__icon">⚡</div>
-                            <div class="pillar-card__info">
-                                <h3>Performance & Responsividade</h3>
-                                <p>Estruturação leve e ágil garantindo carregamento rápido e adaptação fluida do smartphone ao monitor ultrawide.</p>
-                            </div>
-                        </div>
-
-                        <div class="pillar-card">
-                            <div class="pillar-card__icon">🧩</div>
-                            <div class="pillar-card__info">
-                                <h3>Componentização & Código Limpo</h3>
-                                <p>Aplicações organizadas de forma modular em React e JavaScript, facilitando a manutenção e futuras expansões.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Especial: Conexão Profissional LinkedIn -->
-        <section id="linkedin" class="linkedin-section">
-            <div class="section__container">
-                <div class="linkedin-box">
-                    <div class="linkedin-box__glow"></div>
-                    
-                    <div class="linkedin-box__inner">
-                        <div class="linkedin-box__avatar-col">
-                            <div class="linkedin-avatar-wrapper">
-                                <img src="./assets/foto.jpg" alt="João Vitor S. Galdino" class="linkedin-avatar-img">
-                                <div class="linkedin-status-badge" title="Disponível para trabalho">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="linkedin-box__info-col">
-                            <div class="linkedin-badge-tag">
-                                <img src="./assets/linkedin.png" alt="LinkedIn Logo" class="linkedin-mini-logo">
-                                <span>PERFIL PROFISSIONAL OFICIAL</span>
-                            </div>
-
-                            <h3 class="linkedin-box__name">João Vitor S. Galdino</h3>
-                            <p class="linkedin-box__headline">
-                                Desenvolvedor Front-end • Especialista em React, JavaScript Moderno, UI/UX & Web Performance
-                            </p>
-                            <p class="linkedin-box__desc">
-                                Conecte-se comigo no LinkedIn para acompanhar meus projetos, publicações sobre tecnologia, troca de experiências e oportunidades de colaboração.
-                            </p>
-
-                            <div class="linkedin-box__actions">
-                                <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin-primary">
-                                    <img src="./assets/linkedin.png" alt="LinkedIn" class="btn__icon">
-                                    <span>Conectar no LinkedIn</span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-                                </a>
-                                <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                                    <span>Ver Experiências & Recomendações</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Habilidades (Tech Stack) -->
-        <section id="skills" class="skills">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__kicker">CONHECIMENTO TÉCNICO</span>
-                    <h2 class="section__title">Habilidades & Tecnologias</h2>
-                    <div class="section__line"></div>
-                </div>
-
-                <div class="skills__grid">
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Framework</div>
-                        <h3 class="skill-card__name">React.js</h3>
-                        <p class="skill-card__desc">Construção de SPAs dinâmicas, hooks, ciclo de vida e gerenciamento de estado.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Linguagem</div>
-                        <h3 class="skill-card__name">JavaScript (ES6+)</h3>
-                        <p class="skill-card__desc">Manipulação de DOM, consumo de APIs assíncronas (async/await), closures e modularidade.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Fundação</div>
-                        <h3 class="skill-card__name">HTML5 Semântico</h3>
-                        <p class="skill-card__desc">Estruturação semântica, SEO técnico e conformidade com diretrizes de acessibilidade web.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Estilização</div>
-                        <h3 class="skill-card__name">CSS3 & Responsividade</h3>
-                        <p class="skill-card__desc">Flexbox, CSS Grid avançado, animações suaves, variáveis CSS e Mobile-First.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Backend / Runtime</div>
-                        <h3 class="skill-card__name">Node.js</h3>
-                        <p class="skill-card__desc">Criação de scripts de automação, integrações com APIs REST e servidores auxiliares.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Controle de Versão</div>
-                        <h3 class="skill-card__name">Git & GitHub</h3>
-                        <p class="skill-card__desc">Versionamento estruturado, branches, pull requests e boas práticas de commits.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Deploy & Cloud</div>
-                        <h3 class="skill-card__name">Vercel & CI/CD</h3>
-                        <p class="skill-card__desc">Deploy contínuo automatizado, otimizações de performance e DNS de borda.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Design</div>
-                        <h3 class="skill-card__name">UI / UX Design</h3>
-                        <p class="skill-card__desc">Hierarquia visual, contraste, microinterações e usabilidade intuitiva.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Projetos -->
+        <!-- Seção de Projetos em Destaque -->
         <section id="projetos" class="projects">
             <div class="section__container">
                 <div class="section__header">
-                    <span class="section__kicker">PORTFÓLIO EM AÇÃO</span>
+                    <span class="section__kicker">PORTFÓLIO</span>
                     <h2 class="section__title">Projetos em Destaque</h2>
+                    <p class="section__subtitle">Algumas das aplicações que desenvolvi com foco em usabilidade e código estruturado.</p>
                     <div class="section__line"></div>
                 </div>
 
@@ -287,60 +117,54 @@
                     <!-- Projeto 1: Bot -->
                     <article class="project-card">
                         <div class="project-card__header">
-                            <span class="project-card__badge">Automação & Backend</span>
-                            <div class="project-card__links">
-                                <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                                </a>
-                            </div>
+                            <span class="project-card__badge">Automação & Node.js</span>
+                            <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
                         </div>
 
-                        <h3 class="project-card__title">Bot de Automação Inteligente</h3>
+                        <h3 class="project-card__title">Bot de Automação</h3>
                         <p class="project-card__desc">
-                            Sistema de bot modular desenvolvido em Node.js focado em respostas dinâmicas, tratamento assíncrono de eventos e arquitetura desacoplada.
+                            Aplicação de automação e integração assíncrona desenvolvida em Node.js com arquitetura modular e tratamento robusto de eventos.
                         </p>
 
                         <div class="project-card__techs">
                             <span>Node.js</span>
                             <span>JavaScript</span>
-                            <span>APIs</span>
-                            <span>Automação</span>
+                            <span>APIs REST</span>
                         </div>
 
                         <div class="project-card__footer">
                             <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Acessar Repositório</span>
+                                <span>Ver Repositório</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
                         </div>
                     </article>
 
-                    <!-- Projeto 2: Spotify Imersão -->
+                    <!-- Projeto 2: Spotify Clone -->
                     <article class="project-card">
                         <div class="project-card__header">
-                            <span class="project-card__badge">Front-end & UI Clone</span>
-                            <div class="project-card__links">
-                                <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                                </a>
-                            </div>
+                            <span class="project-card__badge">Front-end & Interface</span>
+                            <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
                         </div>
 
                         <h3 class="project-card__title">Spotify Experience Clone</h3>
                         <p class="project-card__desc">
-                            Recriação da interface moderna do Spotify com componentes interativos, listagem dinâmica e layout rigorosamente fiel aos padrões da indústria de streaming.
+                            Interface web inspirada no Spotify focando em layout responsivo, componentização limpa e fidelidade aos padrões de design de produtos de áudio.
                         </p>
 
                         <div class="project-card__techs">
                             <span>HTML5</span>
                             <span>CSS3 Flexbox</span>
                             <span>JavaScript</span>
-                            <span>UI/UX</span>
                         </div>
 
                         <div class="project-card__footer">
                             <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Acessar Repositório</span>
+                                <span>Ver Repositório</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
                         </div>
@@ -349,32 +173,92 @@
                     <!-- Projeto 3: Jogo Número Secreto -->
                     <article class="project-card">
                         <div class="project-card__header">
-                            <span class="project-card__badge">Interatividade & Speech API</span>
-                            <div class="project-card__links">
-                                <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                                </a>
-                            </div>
+                            <span class="project-card__badge">Web Speech API</span>
+                            <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
                         </div>
 
-                        <h3 class="project-card__title">Jogo do Número Secreto por Voz</h3>
+                        <h3 class="project-card__title">Jogo de Voz Interativo</h3>
                         <p class="project-card__desc">
-                            Aplicação interativa que utiliza a Web Speech API para capturar chutes por voz em tempo real, validando intervalos matemáticos e manipulando o DOM com dinamismo.
+                            Aplicação interativa que utiliza a Web Speech API para capturar voz no navegador, avaliar lógica de palpites e atualizar a interface em tempo real.
                         </p>
 
                         <div class="project-card__techs">
                             <span>JavaScript</span>
                             <span>Web Speech API</span>
-                            <span>CSS Grid</span>
+                            <span>CSS3</span>
                         </div>
 
                         <div class="project-card__footer">
                             <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Acessar Repositório</span>
+                                <span>Ver Repositório</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Habilidades (Tech Stack) -->
+        <section id="skills" class="skills">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__kicker">STACK TÉCNICA</span>
+                    <h2 class="section__title">Habilidades & Ferramentas</h2>
+                    <p class="section__subtitle">Tecnologias que utilizo no dia a dia para desenvolver produtos digitais.</p>
+                    <div class="section__line"></div>
+                </div>
+
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Framework</div>
+                        <h3 class="skill-card__name">React.js</h3>
+                        <p class="skill-card__desc">Componentes modulares, hooks, gerenciamento de estado e SPAs.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Linguagem</div>
+                        <h3 class="skill-card__name">JavaScript (ES6+)</h3>
+                        <p class="skill-card__desc">Funções assíncronas, manipulação do DOM e lógica de programação avançada.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Estruturação</div>
+                        <h3 class="skill-card__name">HTML5 Semântico</h3>
+                        <p class="skill-card__desc">Acessibilidade, SEO e organização padronizada de documentos web.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Estilização</div>
+                        <h3 class="skill-card__name">CSS3 & Responsividade</h3>
+                        <p class="skill-card__desc">Flexbox, CSS Grid, animações fluidas e design focado em mobile.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Runtime</div>
+                        <h3 class="skill-card__name">Node.js</h3>
+                        <p class="skill-card__desc">Criação de scripts de suporte, automações e consumo de APIs.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Versionamento</div>
+                        <h3 class="skill-card__name">Git & GitHub</h3>
+                        <p class="skill-card__desc">Controle de versão, ramificações (branches) e boas práticas de commits.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Cloud & Deploy</div>
+                        <h3 class="skill-card__name">Vercel</h3>
+                        <p class="skill-card__desc">Deploy automatizado com CI/CD, configuração de DNS e monitoramento.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Interface</div>
+                        <h3 class="skill-card__name">UI / UX Design</h3>
+                        <p class="skill-card__desc">Atenção a tipografia, contraste, hierarquia visual e facilidade de navegação.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -384,9 +268,9 @@
             <div class="section__container">
                 <div class="contact__box">
                     <span class="contact__kicker">VAMOS CONVERSAR?</span>
-                    <h2 class="contact__title">Pronto para elevar seu próximo projeto digital?</h2>
+                    <h2 class="contact__title">Vamos construir algo relevante juntos?</h2>
                     <p class="contact__desc">
-                        Estou disponível para novas oportunidades profissionais, projetos freelance e networking no ecossistema tech.
+                        Estou disponível para novas oportunidades profissionais, projetos freelance e networking na área de desenvolvimento.
                     </p>
 
                     <div class="contact__links">
@@ -397,7 +281,7 @@
 
                         <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="contact-pill">
                             <img src="./assets/github.png" alt="GitHub">
-                            <span>GitHub</span>
+                            <span>Ver GitHub</span>
                         </a>
 
                         <a href="https://instagram.com/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="contact-pill">
@@ -414,9 +298,9 @@
     <footer class="footer">
         <div class="footer__container">
             <p class="footer__copy">
-                &copy; 2026 João Vitor S. Galdino (@slaaff). Desenvolvido com precisão e estética cinematográfica.
+                &copy; 2026 João Vitor S. Galdino (@slaaff). Todos os direitos reservados.
             </p>
-            <a href="#inicio" class="footer__back-top" title="Voltar ao topo">
+            <a href="#" class="footer__back-top" title="Voltar ao topo">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
             </a>
         </div>
