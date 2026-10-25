@@ -1,7 +1,6 @@
 /**
  * João Vitor - Portfolio Script
- * Tokyo/Kura creative architecture with smooth SPA transitions,
- * magic cursor, dynamic typewriter, filterable portfolio and modal popups.
+ * SPA navigation, magic cursor, dynamic typewriter, modal popups.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         preloader.style.display = 'none';
       }, 500);
-    }, 400);
+    }, 350);
   }
 
   // Section Switching (SPA Navigation)
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(loopOuterCursor);
 
     // Hover effect on interactable elements
-    const hoverables = document.querySelectorAll('a, button, .clickable, input, textarea, .project-card, .service-card');
+    const hoverables = document.querySelectorAll('a, button, .clickable, input, textarea, .skill-card, .service-card');
     hoverables.forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursorInner.classList.add('cursor-hover');
@@ -141,34 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       words[currentIndex].classList.remove('is-hidden');
       words[currentIndex].classList.add('is-visible');
-    }, 2800);
+    }, 2600);
   }
 
-  // Portfolio Category Filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category.includes(filter)) {
-          card.style.display = 'block';
-          card.classList.add('animated', 'fadeIn');
-        } else {
-          card.style.display = 'none';
-          card.classList.remove('animated', 'fadeIn');
-        }
-      });
-    });
-  });
-
-  // Modal Management (About & Projects)
+  // Modal Management (About popup)
   const modalBox = document.querySelector('.tm_modalbox');
   const modalClose = document.querySelectorAll('.modal-close, .modal-backdrop');
   const aboutPopupTrigger = document.querySelector('.about-popup-trigger');
@@ -209,43 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Project Modal Triggers
-  document.querySelectorAll('.project-modal-trigger').forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const card = trigger.closest('.project-card');
-      if (!card) return;
-
-      const title = card.getAttribute('data-title') || 'Projeto';
-      const category = card.getAttribute('data-category-name') || 'Desenvolvimento';
-      const image = card.getAttribute('data-image') || '';
-      const desc = card.getAttribute('data-desc') || '';
-      const tags = (card.getAttribute('data-tags') || '').split(',').map(t => `<span class="badge-tag">${t.trim()}</span>`).join('');
-      const githubUrl = card.getAttribute('data-github') || '';
-      const demoUrl = card.getAttribute('data-demo') || '';
-
-      const content = `
-        <div class="project_popup_details">
-          <div class="top_image">
-            <img src="${image}" alt="${title}" />
-          </div>
-          <div class="details_content">
-            <span class="category_pill">${category}</span>
-            <h3 class="popup_title">${title}</h3>
-            <p class="popup_desc">${desc}</p>
-            <div class="tags_wrap">${tags}</div>
-            <div class="popup_buttons">
-              ${githubUrl ? `<a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver no GitHub</a>` : ''}
-              ${demoUrl ? `<a href="${demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Abrir Demonstração</a>` : ''}
-            </div>
-          </div>
-        </div>
-      `;
-      openModal(content);
-    });
-  });
-
-  // Contact Form Submission
+  // Contact Form Submission (direct to WhatsApp)
   const contactForm = document.getElementById('contact_form');
   const returnMessage = document.querySelector('.return-message');
 
@@ -261,20 +200,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Show success notification
       if (returnMessage) {
         returnMessage.style.display = 'block';
-        returnMessage.innerHTML = '<span>Mensagem recebida com sucesso! Abrindo o WhatsApp para envio imediato...</span>';
+        returnMessage.innerHTML = '<span>Mensagem validada! Abrindo o WhatsApp para envio direto...</span>';
       }
 
-      // Format WhatsApp redirect
-      const whatsappNumber = '5574998000519'; // Or user preferred contact
       const text = encodeURIComponent(`Olá João Vitor! Meu nome é ${name} (${email}).\n\nMensagem: ${message}`);
       
       setTimeout(() => {
         window.open(`https://wa.me/5574998000519?text=${text}`, '_blank');
         contactForm.reset();
-      }, 1200);
+      }, 1000);
     });
   }
 
@@ -291,30 +227,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const particles = [];
-    const count = 35;
+    const count = 30;
 
     for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 2.5 + 1,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        alpha: Math.random() * 0.5 + 0.2
+        radius: Math.random() * 2 + 1,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random() * 0.45 + 0.15
       });
     }
 
     function renderCanvas() {
       ctx.clearRect(0, 0, width, height);
 
-      // Soft ambient radial glow
-      const grad = ctx.createRadialGradient(width * 0.3, height * 0.3, 50, width * 0.3, height * 0.3, width * 0.7);
+      const grad = ctx.createRadialGradient(width * 0.25, height * 0.25, 40, width * 0.25, height * 0.25, width * 0.7);
       grad.addColorStop(0, 'rgba(47, 211, 233, 0.04)');
-      grad.addColorStop(1, 'rgba(10, 13, 20, 0)');
+      grad.addColorStop(1, 'rgba(7, 9, 14, 0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, width, height);
 
-      // Floating particles
       ctx.fillStyle = '#2fd3e9';
       particles.forEach(p => {
         p.x += p.vx;
