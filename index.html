@@ -5,47 +5,358 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>João Vitor | Desenvolvedor Front-end</title>
+    <meta name="description" content="Portfólio de João Vitor - Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3 com design moderno e cinematográfico.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-        </nav>
+    <!-- Iluminação ambiente cinematográfica de fundo -->
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--bottom"></div>
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#inicio" class="header__logo">
+                <span class="logo__text">JOÃO VITOR</span>
+                <span class="logo__dot"></span>
+            </a>
+            
+            <nav class="header__nav">
+                <a class="nav__link" href="#inicio">Início</a>
+                <a class="nav__link" href="#sobre">Sobre</a>
+                <a class="nav__link" href="#skills">Habilidades</a>
+                <a class="nav__link" href="#projetos">Projetos</a>
+                <a class="nav__link" href="#contato">Contato</a>
+            </nav>
+
+            <a class="header__cta" href="https://linkedin.com/in/joaovsgaldino" target="_blank" rel="noopener noreferrer">
+                <span>Conectar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
     </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong 
-            class="titulo-destaque">com um Front-end de qualidade!
-            </strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! Sou João Vitor, desenvolvedor
-            Front-end com especialidade em React, HTML e
-            CSS. Ajudo pequenos negócios e designers a
-            colocarem em prática boas ideias. Vamos
-            conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-                <a class="apresentacao__links__navegacao" href="https://github.com/slaaff">
-                    <img src="./assets/github.png">
-                    Github
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://linkedin.com/in/joaovsgaldino">
-                    <img src="./assets/linkedin.png">
-                    linkedin
-                </a>
-                <a class="apresentacao__links__navegacao" href="https://instagram.com/joaovsgaldino/">
-                    <img src="./assets/instagram.png">
-                    instagram
-                </a>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="status-badge">
+                        <span class="status-badge__dot"></span>
+                        <span class="status-badge__text">Disponível para novos projetos & vagas</span>
+                    </div>
+
+                    <h1 class="hero__title">
+                        Transformando visão em <span class="highlight-gold">experiências digitais</span> cinematográficas.
+                    </h1>
+
+                    <p class="hero__description">
+                        Olá! Sou <strong>João Vitor</strong>, desenvolvedor Front-end apaixonado por interfaces de alto impacto, precisão visual e código limpo. Domino <strong>React, JavaScript, HTML5 e CSS3</strong> para criar aplicações fluidas, memoráveis e prontas para escalar.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#projetos" class="btn btn--primary">
+                            <span>Explorar Projetos</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                            <img src="./assets/github.png" alt="GitHub" class="btn__icon">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/joaovsgaldino" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                            <img src="./assets/linkedin.png" alt="LinkedIn" class="btn__icon">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="photo-frame">
+                        <div class="photo-frame__glow"></div>
+                        <img class="photo-frame__img" src="./assets/foto.jpg" alt="Foto de João Vitor">
+                        <div class="photo-frame__badge">
+                            <span class="badge__title">João Vitor</span>
+                            <span class="badge__subtitle">Front-end Developer</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <img class="apresentacao__imagem" src="./assets/foto.jpg" alt="Foto de João Vitor">
+
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="about">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__kicker">TRAJETÓRIA & PROPÓSITO</span>
+                    <h2 class="section__title">Sobre Mim</h2>
+                    <div class="section__line"></div>
+                </div>
+
+                <div class="about__grid">
+                    <div class="about__text-block">
+                        <p class="about__paragraph">
+                            Minha motivação diária está no ponto exato onde o <strong>design refinado</strong> se encontra com a <strong>lógica de programação</strong>. Acredito que um software de excelência vai além de funcionar: ele precisa ser intuitivo, esteticamente envolvente e eficiente em qualquer tela.
+                        </p>
+                        <p class="about__paragraph">
+                            Com sólida base em <strong>tecnologias Web e Front-end moderno</strong>, busco constantemente aprender novas ferramentas, refinar arquiteturas de componentes e entregar interfaces que valorizam a identidade de marcas e produtos.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-card__number">+2</span>
+                                <span class="stat-card__label">Anos de dedicação e estudos em tecnologia</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-card__number">100%</span>
+                                <span class="stat-card__label">Foco em UI responsiva & código limpo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-card__icon">🎬</div>
+                            <div class="pillar-card__info">
+                                <h3>Estética & Atenção aos Detalhes</h3>
+                                <p>Criação de layouts com harmonia visual, tipografia calibrada e efeitos imersivos que prendem a atenção.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-card__icon">⚡</div>
+                            <div class="pillar-card__info">
+                                <h3>Performance & Responsividade</h3>
+                                <p>Estruturação leve e ágil garantindo carregamento rápido e adaptação fluida do smartphone ao monitor ultrawide.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-card__icon">🧩</div>
+                            <div class="pillar-card__info">
+                                <h3>Componentização & Código Limpo</h3>
+                                <p>Aplicações organizadas de forma modular em React e JavaScript, facilitando a manutenção e futuras expansões.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Habilidades (Tech Stack) -->
+        <section id="skills" class="skills">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__kicker">CONHECIMENTO TÉCNICO</span>
+                    <h2 class="section__title">Habilidades & Tecnologias</h2>
+                    <div class="section__line"></div>
+                </div>
+
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Framework</div>
+                        <h3 class="skill-card__name">React.js</h3>
+                        <p class="skill-card__desc">Construção de SPAs dinâmicas, hooks, ciclo de vida e gerenciamento de estado.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Linguagem</div>
+                        <h3 class="skill-card__name">JavaScript (ES6+)</h3>
+                        <p class="skill-card__desc">Manipulação de DOM, consumo de APIs assíncronas (async/await), closures e modularidade.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Fundação</div>
+                        <h3 class="skill-card__name">HTML5 Semântico</h3>
+                        <p class="skill-card__desc">Estruturação semântica, SEO técnico e conformidade com diretrizes de acessibilidade web.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Estilização</div>
+                        <h3 class="skill-card__name">CSS3 & Responsividade</h3>
+                        <p class="skill-card__desc">Flexbox, CSS Grid avançado, animações suaves, variáveis CSS e Mobile-First.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Backend / Runtime</div>
+                        <h3 class="skill-card__name">Node.js</h3>
+                        <p class="skill-card__desc">Criação de scripts de automação, integrações com APIs REST e servidores auxiliares.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Controle de Versão</div>
+                        <h3 class="skill-card__name">Git & GitHub</h3>
+                        <p class="skill-card__desc">Versionamento estruturado, branches, pull requests e boas práticas de commits.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Deploy & Cloud</div>
+                        <h3 class="skill-card__name">Vercel & CI/CD</h3>
+                        <p class="skill-card__desc">Deploy contínuo automatizado, otimizações de performance e DNS de borda.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card__tag">Design</div>
+                        <h3 class="skill-card__name">UI / UX Design</h3>
+                        <p class="skill-card__desc">Hierarquia visual, contraste, microinterações e usabilidade intuitiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section id="projetos" class="projects">
+            <div class="section__container">
+                <div class="section__header">
+                    <span class="section__kicker">PORTFÓLIO EM AÇÃO</span>
+                    <h2 class="section__title">Projetos em Destaque</h2>
+                    <div class="section__line"></div>
+                </div>
+
+                <div class="projects__grid">
+                    <!-- Projeto 1: Bot -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <span class="project-card__badge">Automação & Backend</span>
+                            <div class="project-card__links">
+                                <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-card__title">Bot de Automação Inteligente</h3>
+                        <p class="project-card__desc">
+                            Sistema de bot modular desenvolvido em Node.js focado em respostas dinâmicas, tratamento assíncrono de eventos e arquitetura desacoplada.
+                        </p>
+
+                        <div class="project-card__techs">
+                            <span>Node.js</span>
+                            <span>JavaScript</span>
+                            <span>APIs</span>
+                            <span>Automação</span>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <span>Acessar Repositório</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2: Spotify Imersão -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <span class="project-card__badge">Front-end & UI Clone</span>
+                            <div class="project-card__links">
+                                <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-card__title">Spotify Experience Clone</h3>
+                        <p class="project-card__desc">
+                            Recriação da interface moderna do Spotify com componentes interativos, listagem dinâmica e layout rigorosamente fiel aos padrões da indústria de streaming.
+                        </p>
+
+                        <div class="project-card__techs">
+                            <span>HTML5</span>
+                            <span>CSS3 Flexbox</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <span>Acessar Repositório</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3: Jogo Número Secreto -->
+                    <article class="project-card">
+                        <div class="project-card__header">
+                            <span class="project-card__badge">Interatividade & Speech API</span>
+                            <div class="project-card__links">
+                                <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h3 class="project-card__title">Jogo do Número Secreto por Voz</h3>
+                        <p class="project-card__desc">
+                            Aplicação interativa que utiliza a Web Speech API para capturar chutes por voz em tempo real, validando intervalos matemáticos e manipulando o DOM com dinamismo.
+                        </p>
+
+                        <div class="project-card__techs">
+                            <span>JavaScript</span>
+                            <span>Web Speech API</span>
+                            <span>CSS Grid</span>
+                        </div>
+
+                        <div class="project-card__footer">
+                            <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <span>Acessar Repositório</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="contact">
+            <div class="section__container">
+                <div class="contact__box">
+                    <span class="contact__kicker">VAMOS CONVERSAR?</span>
+                    <h2 class="contact__title">Pronto para elevar seu próximo projeto digital?</h2>
+                    <p class="contact__desc">
+                        Estou disponível para novas oportunidades profissionais, freelance ou simplesmente trocar ideias sobre tecnologia e front-end.
+                    </p>
+
+                    <div class="contact__links">
+                        <a href="https://linkedin.com/in/joaovsgaldino" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                            <img src="./assets/linkedin.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+
+                        <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                            <img src="./assets/github.png" alt="GitHub">
+                            <span>GitHub</span>
+                        </a>
+
+                        <a href="https://instagram.com/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                            <img src="./assets/instagram.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="rodape">
-        <p>Desenvolvido por João.</p>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copy">
+                &copy; 2026 João Vitor (@slaaff). Desenvolvido com precisão e estética cinematográfica.
+            </p>
+            <a href="#inicio" class="footer__back-top" title="Voltar ao topo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            </a>
+        </div>
     </footer>
 </body>
 
