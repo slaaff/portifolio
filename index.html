@@ -1,310 +1,680 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Vitor S. Galdino | Desenvolvedor Front-end</title>
-    <meta name="description" content="Portfólio profissional de João Vitor S. Galdino - Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3.">
-    
-    <!-- OpenGraph / Social Share -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="João Vitor S. Galdino | Desenvolvedor Front-end">
-    <meta property="og:description" content="Desenvolvedor Front-end especializado em React, JavaScript, HTML5 e CSS3. Aplicações web modernas e responsivas.">
-    <meta property="og:image" content="https://portifolio-rho-tan-10.vercel.app/assets/foto.jpg">
-    <meta property="og:url" content="https://portifolio-rho-tan-10.vercel.app">
-    <meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional de João Vitor (@slaaff) - Desenvolvedor Front-end, especialista em criação de Bots para WhatsApp com Node.js e Baileys, e soluções web modernas." />
+  <meta name="author" content="João Vitor Galdino" />
+  <meta property="og:title" content="João Vitor - Desenvolvedor Front-end & Automação" />
+  <meta property="og:description" content="Portfólio interativo com projetos de automação, bots para WhatsApp e desenvolvimento web." />
+  <meta property="og:image" content="assets/foto.jpg" />
+  <link rel="icon" type="image/png" href="assets/foto.jpg" />
+  <title>João Vitor - Desenvolvedor Front-end & Automação</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="./styles/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
-
 <body>
-    <!-- Iluminação ambiente de fundo -->
-    <div class="ambient-glow ambient-glow--top"></div>
-    <div class="ambient-glow ambient-glow--bottom"></div>
 
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo">
-                <span class="logo__text">JOÃO VITOR</span>
-                <span class="logo__dot"></span>
-            </a>
-            
-            <nav class="header__nav">
-                <a class="nav__link nav__link--active" href="index.html">Início</a>
-                <a class="nav__link" href="about.html">Sobre mim</a>
-                <a class="nav__link" href="#projetos">Projetos</a>
-                <a class="nav__link" href="#skills">Habilidades</a>
-                <a class="nav__link" href="#contato">Contato</a>
-            </nav>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader_line"></div>
+  </div>
 
-            <a class="header__cta" href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer">
-                <img src="./assets/linkedin.png" alt="LinkedIn" class="header__cta-icon">
-                <span>LinkedIn</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-            </a>
+  <!-- Ambient Animated Background Canvas & Glows -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="bg-ambient-lights"></div>
+
+  <!-- Magic Trailing Cursor -->
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+
+  <!-- Desktop Header Navigation -->
+  <header class="tm_header">
+    <div class="header_logo">
+      <a href="#home" class="nav-link">
+        <span>João Vitor</span>
+        <span class="logo-dot">.</span>
+      </a>
+    </div>
+    <nav class="header_menu">
+      <ul>
+        <li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link">Projetos</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile Topbar -->
+  <div class="tm_topbar">
+    <div class="topbar_logo">
+      <a href="#home" class="nav-link">
+        <span>João Vitor</span><span class="coloring">.</span>
+      </a>
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="tm_mobile_menu">
+    <div class="mobile_menu_list">
+      <ul>
+        <li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link">Projetos</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Central Fixed Content Area -->
+  <main class="tm_content">
+
+    <!-- ==============================================
+         SECTION 1: HOME
+    ============================================== -->
+    <section class="tm_section animated fadeInUp" id="home">
+      <div class="home_inner">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Disponível para novos projetos & parcerias</span>
         </div>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero__container">
-                <div class="hero__content">
-                    <div class="status-badge">
-                        <span class="status-badge__dot"></span>
-                        <span class="status-badge__text">Disponível para novas oportunidades</span>
-                    </div>
+        <h1 class="home_name">
+          João <span class="coloring">Vitor</span>
+        </h1>
 
-                    <h1 class="hero__title">
-                        Desenvolvedor <span class="highlight-gold">Front-end</span> focado em React & Web Moderna.
-                    </h1>
-
-                    <p class="hero__description">
-                        Olá! Sou <strong>João Vitor S. Galdino</strong>. Construo interfaces web rápidas, responsivas e intuitivas com foco em <strong>React, JavaScript, HTML5 e CSS3</strong>, aliando código limpo à ótima experiência de usuário.
-                    </p>
-
-                    <div class="hero__actions">
-                        <a href="#projetos" class="btn btn--primary">
-                            <span>Ver Projetos</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="about.html" class="btn btn--secondary">
-                            <span>Mais Sobre Mim</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin-hero">
-                            <img src="./assets/linkedin.png" alt="LinkedIn" class="btn__icon">
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                            <img src="./assets/github.png" alt="GitHub" class="btn__icon">
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero__visual">
-                    <div class="photo-frame">
-                        <div class="photo-frame__glow"></div>
-                        <img class="photo-frame__img" src="./assets/foto.jpg" alt="Foto de João Vitor S. Galdino">
-                        <div class="photo-frame__badge">
-                            <span class="badge__title">João Vitor S. Galdino</span>
-                            <span class="badge__subtitle">Desenvolvedor Front-end • @slaaff</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Projetos em Destaque -->
-        <section id="projetos" class="projects">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__kicker">PORTFÓLIO</span>
-                    <h2 class="section__title">Projetos em Destaque</h2>
-                    <p class="section__subtitle">Algumas das aplicações que desenvolvi com foco em usabilidade e código estruturado.</p>
-                    <div class="section__line"></div>
-                </div>
-
-                <div class="projects__grid">
-                    <!-- Projeto 1: Bot -->
-                    <article class="project-card">
-                        <div class="project-card__header">
-                            <span class="project-card__badge">Automação & Node.js</span>
-                            <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            </a>
-                        </div>
-
-                        <h3 class="project-card__title">Bot de Automação</h3>
-                        <p class="project-card__desc">
-                            Aplicação de automação e integração assíncrona desenvolvida em Node.js com arquitetura modular e tratamento robusto de eventos.
-                        </p>
-
-                        <div class="project-card__techs">
-                            <span>Node.js</span>
-                            <span>JavaScript</span>
-                            <span>APIs REST</span>
-                        </div>
-
-                        <div class="project-card__footer">
-                            <a href="https://github.com/slaaff/bot" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Ver Repositório</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 2: Spotify Clone -->
-                    <article class="project-card">
-                        <div class="project-card__header">
-                            <span class="project-card__badge">Front-end & Interface</span>
-                            <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            </a>
-                        </div>
-
-                        <h3 class="project-card__title">Spotify Experience Clone</h3>
-                        <p class="project-card__desc">
-                            Interface web inspirada no Spotify focando em layout responsivo, componentização limpa e fidelidade aos padrões de design de produtos de áudio.
-                        </p>
-
-                        <div class="project-card__techs">
-                            <span>HTML5</span>
-                            <span>CSS3 Flexbox</span>
-                            <span>JavaScript</span>
-                        </div>
-
-                        <div class="project-card__footer">
-                            <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Ver Repositório</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Projeto 3: Jogo Número Secreto -->
-                    <article class="project-card">
-                        <div class="project-card__header">
-                            <span class="project-card__badge">Web Speech API</span>
-                            <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" title="Ver código no GitHub" class="icon-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                            </a>
-                        </div>
-
-                        <h3 class="project-card__title">Jogo de Voz Interativo</h3>
-                        <p class="project-card__desc">
-                            Aplicação interativa que utiliza a Web Speech API para capturar voz no navegador, avaliar lógica de palpites e atualizar a interface em tempo real.
-                        </p>
-
-                        <div class="project-card__techs">
-                            <span>JavaScript</span>
-                            <span>Web Speech API</span>
-                            <span>CSS3</span>
-                        </div>
-
-                        <div class="project-card__footer">
-                            <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" class="project-link">
-                                <span>Ver Repositório</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Habilidades (Tech Stack) -->
-        <section id="skills" class="skills">
-            <div class="section__container">
-                <div class="section__header">
-                    <span class="section__kicker">STACK TÉCNICA</span>
-                    <h2 class="section__title">Habilidades & Ferramentas</h2>
-                    <p class="section__subtitle">Tecnologias que utilizo no dia a dia para desenvolver produtos digitais.</p>
-                    <div class="section__line"></div>
-                </div>
-
-                <div class="skills__grid">
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Framework</div>
-                        <h3 class="skill-card__name">React.js</h3>
-                        <p class="skill-card__desc">Componentes modulares, hooks, gerenciamento de estado e SPAs.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Linguagem</div>
-                        <h3 class="skill-card__name">JavaScript (ES6+)</h3>
-                        <p class="skill-card__desc">Funções assíncronas, manipulação do DOM e lógica de programação avançada.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Estruturação</div>
-                        <h3 class="skill-card__name">HTML5 Semântico</h3>
-                        <p class="skill-card__desc">Acessibilidade, SEO e organização padronizada de documentos web.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Estilização</div>
-                        <h3 class="skill-card__name">CSS3 & Responsividade</h3>
-                        <p class="skill-card__desc">Flexbox, CSS Grid, animações fluidas e design focado em mobile.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Runtime</div>
-                        <h3 class="skill-card__name">Node.js</h3>
-                        <p class="skill-card__desc">Criação de scripts de suporte, automações e consumo de APIs.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Versionamento</div>
-                        <h3 class="skill-card__name">Git & GitHub</h3>
-                        <p class="skill-card__desc">Controle de versão, ramificações (branches) e boas práticas de commits.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Cloud & Deploy</div>
-                        <h3 class="skill-card__name">Vercel</h3>
-                        <p class="skill-card__desc">Deploy automatizado com CI/CD, configuração de DNS e monitoramento.</p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-card__tag">Interface</div>
-                        <h3 class="skill-card__name">UI / UX Design</h3>
-                        <p class="skill-card__desc">Atenção a tipografia, contraste, hierarquia visual e facilidade de navegação.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contato" class="contact">
-            <div class="section__container">
-                <div class="contact__box">
-                    <span class="contact__kicker">VAMOS CONVERSAR?</span>
-                    <h2 class="contact__title">Vamos construir algo relevante juntos?</h2>
-                    <p class="contact__desc">
-                        Estou disponível para novas oportunidades profissionais, projetos freelance e networking na área de desenvolvimento.
-                    </p>
-
-                    <div class="contact__links">
-                        <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="contact-pill contact-pill--linkedin">
-                            <img src="./assets/linkedin.png" alt="LinkedIn">
-                            <span>Conectar no LinkedIn</span>
-                        </a>
-
-                        <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="contact-pill">
-                            <img src="./assets/github.png" alt="GitHub">
-                            <span>Ver GitHub</span>
-                        </a>
-
-                        <a href="https://instagram.com/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="contact-pill">
-                            <img src="./assets/instagram.png" alt="Instagram">
-                            <span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-        <div class="footer__container">
-            <p class="footer__copy">
-                &copy; 2026 João Vitor S. Galdino (@slaaff). Todos os direitos reservados.
-            </p>
-            <a href="#" class="footer__back-top" title="Voltar ao topo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
-            </a>
+        <div class="home_job">
+          <span>Desenvolvedor </span>
+          <span class="cd-words-wrapper">
+            <b class="is-visible">Front-end</b>
+            <b class="is-hidden">Bots WhatsApp</b>
+            <b class="is-hidden">Node.js & Baileys</b>
+            <b class="is-hidden">Fullstack</b>
+            <b class="is-hidden">Soluções Web</b>
+          </span>
         </div>
-    </footer>
+
+        <p class="home_bio">
+          Desenvolvedor focado em criar experiências digitais modernas, funcionais e de alta performance. Especializado no ecossistema JavaScript, construção de interfaces web fluidas e desenvolvimento de bots inteligentes e automações avançadas para WhatsApp com Node.js e Baileys.
+        </p>
+
+        <div class="home_actions">
+          <a href="#contact" class="btn btn-primary action-link">Entre em Contato</a>
+          <a href="#portfolio" class="btn btn-outline action-link">Ver Projetos</a>
+        </div>
+
+        <div class="home_socials">
+          <a href="https://github.com/slaaff" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub (@slaaff)">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://wa.me/5574998000519" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp Direto">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 2: ABOUT
+    ============================================== -->
+    <section class="tm_section hidden" id="about">
+      <div class="section_title">
+        <h3>Sobre <span class="coloring">Mim</span></h3>
+        <p class="section_subtitle">Desenvolvedor Front-end & Especialista em Automação</p>
+      </div>
+
+      <div class="about_wrap">
+        <div class="about_left">
+          <div class="author_avatar">
+            <img src="assets/foto.jpg" alt="João Vitor" />
+            <div class="avatar_overlay_badge">
+              <span class="pulse-dot"></span>
+              <span>João Vitor Galdino</span>
+            </div>
+          </div>
+
+          <div class="quick_info_card">
+            <ul>
+              <li><span class="label">Perfil:</span> <span class="val">Front-end & Automação</span></li>
+              <li><span class="label">Localização:</span> <span class="val">Salvador, BA - Brasil</span></li>
+              <li><span class="label">GitHub:</span> <span class="val">@slaaff</span></li>
+              <li><span class="label">LinkedIn:</span> <span class="val">in/joaovsgaldino</span></li>
+              <li><span class="label">Idiomas:</span> <span class="val">Português (Nativo)</span></li>
+            </ul>
+          </div>
+
+          <button class="btn btn-outline about-popup-trigger" style="width: 100%;">Ver Biografia Completa</button>
+        </div>
+
+        <div class="about_right">
+          <p class="about_bio_text">
+            Sou desenvolvedor com sólida atuação na criação de interfaces web responsivas, componentes dinâmicos e ecossistemas de automação. Minha paixão é unir design elegante, usabilidade impecável e código limpo para construir aplicações modernas que geram impacto real.
+          </p>
+          <p class="about_bio_text">
+            Com ampla experiência no desenvolvimento de <strong>bots inteligentes para WhatsApp</strong> utilizando a biblioteca Baileys e Node.js, domino arquiteturas modulares orientadas a eventos, manipulação de sockets, webhooks e integração com bancos de dados.
+          </p>
+
+          <div class="specialties_grid">
+            <div class="specialty_box">
+              <h4>💻 Front-end Moderno</h4>
+              <p>Interfaces responsivas com HTML5 semântico, CSS3 flexível/grid, JavaScript moderno e componentização limpa.</p>
+            </div>
+            <div class="specialty_box">
+              <h4>🤖 Bots & Automação</h4>
+              <p>Automações de ponta para WhatsApp com Baileys, arquitetura de plugins desacoplada e alta estabilidade.</p>
+            </div>
+            <div class="specialty_box">
+              <h4>⚡ Node.js & APIs</h4>
+              <p>Construção de rotinas assíncronas, consumo e desenvolvimento de APIs RESTful e persistência de dados.</p>
+            </div>
+            <div class="specialty_box">
+              <h4>🚀 Git CI/CD & Deploy</h4>
+              <p>Versionamento avançado com Git/GitHub, esteiras automatizadas na Vercel e deploy em servidores Linux.</p>
+            </div>
+          </div>
+
+          <div class="skills_container">
+            <h4 class="skills_title">Habilidades Técnicas</h4>
+
+            <div class="skill_item">
+              <div class="skill_header">
+                <span>JavaScript & Lógica Assíncrona</span>
+                <span>90%</span>
+              </div>
+              <div class="skill_bar_bg">
+                <div class="skill_bar_fill" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill_item">
+              <div class="skill_header">
+                <span>HTML5 Semântico & CSS3 Moderno</span>
+                <span>95%</span>
+              </div>
+              <div class="skill_bar_bg">
+                <div class="skill_bar_fill" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="skill_item">
+              <div class="skill_header">
+                <span>Node.js & Baileys (WhatsApp Bots)</span>
+                <span>90%</span>
+              </div>
+              <div class="skill_bar_bg">
+                <div class="skill_bar_fill" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill_item">
+              <div class="skill_header">
+                <span>Git, GitHub & Deploy Cloud (Vercel / Linux)</span>
+                <span>92%</span>
+              </div>
+              <div class="skill_bar_bg">
+                <div class="skill_bar_fill" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <div class="skill_item">
+              <div class="skill_header">
+                <span>Design Responsivo & UI/UX</span>
+                <span>88%</span>
+              </div>
+              <div class="skill_bar_bg">
+                <div class="skill_bar_fill" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 3: PORTFOLIO
+    ============================================== -->
+    <section class="tm_section hidden" id="portfolio">
+      <div class="section_title">
+        <h3>Meus <span class="coloring">Projetos</span></h3>
+        <p class="section_subtitle">Trabalhos em destaque em automação, bots e desenvolvimento web</p>
+      </div>
+
+      <div class="portfolio_filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="bots">Bots WhatsApp</button>
+        <button class="filter-btn" data-filter="web">Web & Jogos</button>
+        <button class="filter-btn" data-filter="frontend">Front-end</button>
+      </div>
+
+      <div class="projects_grid">
+
+        <!-- Project 1: Iris Bot -->
+        <article class="project-card" data-category="bots"
+          data-title="Iris Bot"
+          data-category-name="Bots WhatsApp"
+          data-image="assets/thumb-iris.svg"
+          data-desc="Bot inteligente e multi-comandos para WhatsApp desenvolvido em Node.js com Baileys. Possui gerenciamento avançado de grupos, respostas automatizadas com inteligência contextual e banco de dados local estruturado."
+          data-tags="Node.js, Baileys, WhatsApp Bot, Automação"
+          data-github="https://github.com/slaaff/iris"
+          data-demo="">
+          <div class="card_thumb">
+            <img src="assets/thumb-iris.svg" alt="Iris Bot" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://github.com/slaaff/iris" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Bots WhatsApp</span>
+            <h4 class="card_title">Iris Bot</h4>
+            <p class="card_desc">Bot inteligente e multi-comandos para WhatsApp com Baileys e gestão avançada de eventos.</p>
+            <div class="card_tags">
+              <span class="tag-badge">Node.js</span>
+              <span class="tag-badge">Baileys</span>
+              <span class="tag-badge">Automação</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://github.com/slaaff/iris" target="_blank" rel="noopener noreferrer">↗ Repositório no GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Daisy Bot -->
+        <article class="project-card" data-category="bots"
+          data-title="Daisy Bot"
+          data-category-name="Bots WhatsApp"
+          data-image="assets/thumb-daisy.svg"
+          data-desc="Sistema modular de automação para WhatsApp com arquitetura baseada em plugins desacoplados. Suporta comandos administrativos, respostas dinâmicas e gerenciamento de grupos com alta estabilidade."
+          data-tags="Node.js, Plugins, WhatsApp API, Baileys"
+          data-github="https://github.com/slaaff/daisy"
+          data-demo="">
+          <div class="card_thumb">
+            <img src="assets/thumb-daisy.svg" alt="Daisy Bot" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://github.com/slaaff/daisy" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Bots WhatsApp</span>
+            <h4 class="card_title">Daisy Bot</h4>
+            <p class="card_desc">Automação modular para WhatsApp com sistema extensível de plugins desacoplados.</p>
+            <div class="card_tags">
+              <span class="tag-badge">Node.js</span>
+              <span class="tag-badge">Plugins</span>
+              <span class="tag-badge">Modular</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://github.com/slaaff/daisy" target="_blank" rel="noopener noreferrer">↗ Repositório no GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Hiyuki Bot -->
+        <article class="project-card" data-category="bots"
+          data-title="Hiyuki Bot"
+          data-category-name="Bots WhatsApp"
+          data-image="assets/thumb-hiyuki.svg"
+          data-desc="Assistente virtual veloz e utilitário para WhatsApp (Base V1), estruturado para execução ágil de rotinas, comandos interativos e integração com módulos de utilidades."
+          data-tags="Node.js, Baileys, Assistente Virtual, WhatsApp"
+          data-github="https://github.com/slaaff/hiyuki"
+          data-demo="">
+          <div class="card_thumb">
+            <img src="assets/thumb-hiyuki.svg" alt="Hiyuki Bot" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://github.com/slaaff/hiyuki" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Bots WhatsApp</span>
+            <h4 class="card_title">Hiyuki Bot</h4>
+            <p class="card_desc">Assistente virtual ágil e leve para WhatsApp com comandos utilitários e integração Baileys.</p>
+            <div class="card_tags">
+              <span class="tag-badge">Node.js</span>
+              <span class="tag-badge">Baileys</span>
+              <span class="tag-badge">Utilitários</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://github.com/slaaff/hiyuki" target="_blank" rel="noopener noreferrer">↗ Repositório no GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Jogo do Número Secreto -->
+        <article class="project-card" data-category="web"
+          data-title="Jogo do Número Secreto"
+          data-category-name="Web & Jogos"
+          data-image="assets/thumb-game.svg"
+          data-desc="Aplicação web interativa com lógica em JavaScript moderno, manipulação dinâmica do DOM e sintetizador de voz integrado (Web Speech API). Desenvolvido com foco em interatividade e UX acessível."
+          data-tags="JavaScript, Web Speech API, CSS3, Vercel"
+          data-github="https://github.com/slaaff/jogo-do-numero-secreto-alura"
+          data-demo="https://jogo-do-numero-secreto-alura-sable.vercel.app">
+          <div class="card_thumb">
+            <img src="assets/thumb-game.svg" alt="Jogo do Número Secreto" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://jogo-do-numero-secreto-alura-sable.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Jogar</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Web & Jogos</span>
+            <h4 class="card_title">Jogo do Número Secreto</h4>
+            <p class="card_desc">Jogo interativo em JavaScript com sintetizador de voz e manipulação avançada de DOM.</p>
+            <div class="card_tags">
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Web Speech</span>
+              <span class="tag-badge">Vercel</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://jogo-do-numero-secreto-alura-sable.vercel.app" target="_blank" rel="noopener noreferrer">🎮 Ver Demonstração</a>
+              <a href="https://github.com/slaaff/jogo-do-numero-secreto-alura" target="_blank" rel="noopener noreferrer" style="margin-left: auto;">↗ GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Spotify Clone -->
+        <article class="project-card" data-category="frontend"
+          data-title="Spotify Clone"
+          data-category-name="Front-end"
+          data-image="assets/thumb-spotify.svg"
+          data-desc="Recriação fiel e responsiva da interface do Spotify desenvolvida durante a Imersão Alura. Explora CSS Grid, Flexbox avançado, estilização de cards de álbuns e dinamismo visual."
+          data-tags="HTML5, CSS Grid, Flexbox, UI Clone"
+          data-github="https://github.com/slaaff/spotify-imersao-alura"
+          data-demo="">
+          <div class="card_thumb">
+            <img src="assets/thumb-spotify.svg" alt="Spotify Clone" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Front-end</span>
+            <h4 class="card_title">Spotify Clone</h4>
+            <p class="card_desc">Recriação da interface do Spotify com CSS Grid moderno e layout totalmente responsivo.</p>
+            <div class="card_tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS Grid</span>
+              <span class="tag-badge">UI/UX</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://github.com/slaaff/spotify-imersao-alura" target="_blank" rel="noopener noreferrer">↗ Repositório no GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Portfólio Clássico -->
+        <article class="project-card" data-category="frontend"
+          data-title="Portfólio Clássico"
+          data-category-name="Front-end"
+          data-image="assets/thumb-portfolio.svg"
+          data-desc="Primeiro projeto de portfólio web construído com HTML5 e CSS3 semântico, marcando a base sólida de desenvolvimento web com deploy em produção na Vercel."
+          data-tags="HTML5, CSS3, Vercel, Responsive"
+          data-github="https://github.com/slaaff/Portifolio-HTML-e-CSS"
+          data-demo="https://portifolio-html-e-css-sand.vercel.app">
+          <div class="card_thumb">
+            <img src="assets/thumb-portfolio.svg" alt="Portfólio Clássico" />
+            <div class="card_overlay_actions">
+              <button class="btn btn-primary project-modal-trigger">Ver Detalhes</button>
+              <a href="https://portifolio-html-e-css-sand.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Acessar</a>
+            </div>
+          </div>
+          <div class="card_body">
+            <span class="card_category_badge">Front-end</span>
+            <h4 class="card_title">Portfólio Clássico</h4>
+            <p class="card_desc">Projeto clássico de portfólio em HTML e CSS puro hospedado com deploy contínuo na Vercel.</p>
+            <div class="card_tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3</span>
+              <span class="tag-badge">Vercel</span>
+            </div>
+            <div class="card_footer_links">
+              <a href="https://portifolio-html-e-css-sand.vercel.app" target="_blank" rel="noopener noreferrer">🌐 Ver Site Online</a>
+              <a href="https://github.com/slaaff/Portifolio-HTML-e-CSS" target="_blank" rel="noopener noreferrer" style="margin-left: auto;">↗ GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 4: SERVICES
+    ============================================== -->
+    <section class="tm_section hidden" id="services">
+      <div class="section_title">
+        <h3>Meus <span class="coloring">Serviços</span></h3>
+        <p class="section_subtitle">Soluções digitais com foco em performance, automação inteligente e usabilidade</p>
+      </div>
+
+      <div class="services_grid">
+
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service_icon_wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A1.5 1.5 0 0 0 6 14.5 1.5 1.5 0 0 0 7.5 16 1.5 1.5 0 0 0 9 14.5 1.5 1.5 0 0 0 7.5 13m9 0a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5M9.5 18a.5.5 0 0 0-.5.5v.5h6v-.5a.5.5 0 0 0-.5-.5z"/></svg>
+          </div>
+          <h4 class="service_title">Chatbots & Automação WhatsApp</h4>
+          <p class="service_desc">Desenvolvimento de bots sob medida para WhatsApp utilizando a biblioteca Baileys e Node.js para automatizar atendimento, rotinas e fluxos operacionais.</p>
+          <ul class="service_features">
+            <li>Respostas automáticas inteligentes e menus interativos</li>
+            <li>Gerenciamento e moderação automatizada de grupos</li>
+            <li>Integração com bancos de dados e APIs externas</li>
+            <li>Arquitetura modular resiliente e sem risco de desconexão</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service_icon_wrap">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zm-8-3l4-4-1.41-1.41L12 12.17l-1.59-1.59L9 12l3 3z"/></svg>
+          </div>
+          <h4 class="service_title">Desenvolvimento Web & Front-end</h4>
+          <p class="service_desc">Construção de landing pages, portfólios e interfaces modernas, responsivas e visualmente marcantes com HTML5, CSS3 avançado e JavaScript.</p>
+          <ul class="service_features">
+            <li>Layouts mobile-first totalmente responsivos</li>
+            <li>Animações fluidas e microinterações de alto impacto</li>
+            <li>Otimização de performance e pontuação Core Web Vitals</li>
+            <li>Código limpo, acessível e estruturado semanticamente</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service_icon_wrap">
+            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+          </div>
+          <h4 class="service_title">Desenvolvimento de APIs & Back-end</h4>
+          <p class="service_desc">Arquitetura de rotas e APIs RESTful em Node.js com Express para comunicação entre sistemas, processamento de dados e webhooks.</p>
+          <ul class="service_features">
+            <li>Estruturação de endpoints RESTful limpos e documentados</li>
+            <li>Integração com webhooks e serviços de terceiros</li>
+            <li>Automação de scripts e rotinas assíncronas em background</li>
+            <li>Persistência e modelagem de dados leves e eficientes</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service_icon_wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h4 class="service_title">Deploy, Cloud & Infraestrutura</h4>
+          <p class="service_desc">Configuração completa de esteiras de integração contínua (CI/CD) no GitHub, deploy na Vercel e gerenciamento de servidores Linux remotos.</p>
+          <ul class="service_features">
+            <li>Deploy automatizado contínuo via GitHub e Vercel</li>
+            <li>Configuração de servidores virtuais (VMs Linux / Ubuntu)</li>
+            <li>Higienização de credenciais e segurança de chaves de API</li>
+            <li>Monitoramento, logs e alta disponibilidade de aplicações</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 5: CONTACT
+    ============================================== -->
+    <section class="tm_section hidden" id="contact">
+      <div class="section_title">
+        <h3>Entre em <span class="coloring">Contato</span></h3>
+        <p class="section_subtitle">Vamos conversar sobre o seu próximo projeto ou oportunidade</p>
+      </div>
+
+      <div class="contact_wrap">
+        <div class="contact_left">
+          <ul>
+            <li>
+              <div class="contact_info_box">
+                <div class="contact_icon_circle">
+                  <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <div class="contact_text">
+                  <h5>Localização</h5>
+                  <span>Salvador, Bahia - Brasil</span>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact_info_box">
+                <div class="contact_icon_circle">
+                  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </div>
+                <div class="contact_text">
+                  <h5>WhatsApp</h5>
+                  <a href="https://wa.me/5574998000519" target="_blank" rel="noopener noreferrer">+55 74 99800-0519</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact_info_box">
+                <div class="contact_icon_circle">
+                  <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="contact_text">
+                  <h5>E-mail</h5>
+                  <a href="mailto:vivodemiojo@gmail.com">vivodemiojo@gmail.com</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact_info_box">
+                <div class="contact_icon_circle">
+                  <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="contact_text">
+                  <h5>LinkedIn</h5>
+                  <a href="https://www.linkedin.com/in/joaovsgaldino/" target="_blank" rel="noopener noreferrer">/in/joaovsgaldino</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact_right">
+          <form id="contact_form">
+            <div class="return-message"></div>
+
+            <div class="form_row">
+              <div class="form_group">
+                <input type="text" id="name" placeholder="Seu Nome *" required />
+              </div>
+              <div class="form_group">
+                <input type="email" id="email" placeholder="Seu E-mail *" required />
+              </div>
+            </div>
+
+            <div class="form_group">
+              <textarea id="message" placeholder="Como posso ajudar no seu projeto? Descreva sua ideia ou necessidade *" required></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Enviar Mensagem Direta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Modal Window -->
+  <div class="tm_modalbox">
+    <div class="modal-backdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close" aria-label="Fechar modal">✕</button>
+      <div class="modal-content-area"></div>
+    </div>
+  </div>
+
+  <!-- Hidden About Modal Template -->
+  <template id="about-modal-template">
+    <div class="about_popup_details">
+      <div class="section_title" style="margin-bottom: 20px;">
+        <h3>Trajetória & <span class="coloring">Formação</span></h3>
+        <p class="section_subtitle">Conheça mais sobre a experiência profissional e aprendizado contínuo</p>
+      </div>
+
+      <p style="font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px;">
+        Meu foco como desenvolvedor está na resolução de problemas do mundo real através da tecnologia. Seja desenhando uma interface intuitiva para a web ou arquitetando um bot de atendimento automático de alta vazão no WhatsApp, busco sempre a excelência técnica, código bem documentado e estabilidade a longo prazo.
+      </p>
+
+      <div class="timeline_block">
+        <h4 class="timeline_title">🎓 Educação & Certificações</h4>
+        <div class="timeline_list">
+          <div class="timeline_item">
+            <span class="year">2024 - Presente</span>
+            <h4>Imersão Dev & Formação Front-end — Alura</h4>
+            <p>Desenvolvimento focado em JavaScript ES6+, manipulação profunda do DOM, CSS Grid, Flexbox, consumo de APIs e boas práticas de arquitetura web.</p>
+          </div>
+          <div class="timeline_item">
+            <span class="year">2023 - 2024</span>
+            <h4>Desenvolvimento Autônomo & Ecossistema Node.js</h4>
+            <p>Especialização na biblioteca Baileys para integração direta com a rede do WhatsApp Web, gerenciamento de sockets, tratamento de concorrência e persistência de sessões seguras.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline_block">
+        <h4 class="timeline_title">💼 Experiência & Projetos</h4>
+        <div class="timeline_list">
+          <div class="timeline_item">
+            <span class="year">2024 - Presente</span>
+            <h4>Desenvolvedor Freelancer — Bots & Automação</h4>
+            <p>Desenvolvimento de soluções personalizadas de bots para grupos e atendimento no WhatsApp, com disparo automatizado, regras de moderação e integração com bancos de dados.</p>
+          </div>
+          <div class="timeline_item">
+            <span class="year">2024</span>
+            <h4>Projetos Open Source — GitHub (@slaaff)</h4>
+            <p>Manutenção e desenvolvimento ativo de repositórios públicos como Iris Bot, Daisy Bot e Hiyuki Bot, além de clones de interfaces e jogos web.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- JavaScript -->
+  <script src="assets/main.js"></script>
 </body>
-
 </html>
